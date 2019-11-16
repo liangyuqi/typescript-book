@@ -1,0 +1,633 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>对象的类型——接口 · typescript-book</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="6-数组.html" />
+    
+    
+    <link rel="prev" href="4-联合类型.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">1-基础部分</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1-简单数据类型.html">
+            
+                <a href="1-简单数据类型.html">
+            
+                    
+                    简单数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2-简单补充数据类型.html">
+            
+                <a href="2-简单补充数据类型.html">
+            
+                    
+                    简单补充数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3-类型推论.html">
+            
+                <a href="3-类型推论.html">
+            
+                    
+                    类型推论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4-联合类型.html">
+            
+                <a href="4-联合类型.html">
+            
+                    
+                    联合类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="5-对象的类型-接口.html">
+            
+                <a href="5-对象的类型-接口.html">
+            
+                    
+                    对象的类型——接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6-数组.html">
+            
+                <a href="6-数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="7-函数.html">
+            
+                <a href="7-函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">2-基础部分</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../2-基础部分/1-简单数据类型.html">
+            
+                <a href="../2-基础部分/1-简单数据类型.html">
+            
+                    
+                    简单数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../2-基础部分/2-简单补充数据类型.html">
+            
+                <a href="../2-基础部分/2-简单补充数据类型.html">
+            
+                    
+                    简单补充数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    1-基础部分
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                    2-基础部分
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                    gitbook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" >
+            
+                <span>
+            
+                    
+                    fonts
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1.1" >
+            
+                <span>
+            
+                    
+                    fontawesome
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" >
+            
+                <span>
+            
+                    
+                    gitbook-plugin-fontsettings
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" >
+            
+                <span>
+            
+                    
+                    gitbook-plugin-highlight
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" >
+            
+                <span>
+            
+                    
+                    gitbook-plugin-livereload
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" >
+            
+                <span>
+            
+                    
+                    gitbook-plugin-lunr
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.6" >
+            
+                <span>
+            
+                    
+                    gitbook-plugin-search
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.7" >
+            
+                <span>
+            
+                    
+                    gitbook-plugin-sharing
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.8" >
+            
+                <span>
+            
+                    
+                    gitbook-plugin-theme-comscore
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.9" >
+            
+                <span>
+            
+                    
+                    gitbook-plugin-toggle-chapters
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.10" >
+            
+                <span>
+            
+                    
+                    images
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >对象的类型——接口</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#x2014;&#x2014;&#x63A5;&#x53E3;">&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#x2014;&#x2014;&#x63A5;&#x53E3;</h1>
+<p>&#x5728; TypeScript &#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x63A5;&#x53E3;&#xFF08;Interface&#xFF09;&#x6765;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
+<h2 id="&#x4EC0;&#x4E48;&#x662F;&#x63A5;&#x53E3;">&#x4EC0;&#x4E48;&#x662F;&#x63A5;&#x53E3;</h2>
+<p>&#x5728;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x63A5;&#x53E3;&#xFF08;Interface&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5B83;&#x662F;&#x5BF9;&#x884C;&#x4E3A;&#x7684;&#x62BD;&#x8C61;&#xFF0C;&#x800C;&#x5177;&#x4F53;&#x5982;&#x4F55;&#x884C;&#x52A8;&#x9700;&#x8981;&#x7531;&#x7C7B;&#xFF08;class&#xFF09;&#x53BB;&#x5B9E;&#x73B0;&#xFF08;<code>implement</code>&#xFF09;&#x3002;</p>
+<p>TypeScript &#x4E2D;&#x7684;&#x63A5;&#x53E3;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x7075;&#x6D3B;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x9664;&#x4E86;&#x53EF;&#x7528;&#x4E8E;&#x5BF9;&#x7C7B;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x884C;&#x4E3A;&#x8FDB;&#x884C;&#x62BD;&#x8C61;&#x4EE5;&#x5916;&#xFF0C;&#x4E5F;&#x5E38;&#x7528;&#x4E8E;&#x5BF9;&#x300C;&#x5BF9;&#x8C61;&#x7684;&#x5F62;&#x72B6;&#xFF08;Shape&#xFF09;&#x300D;&#x8FDB;&#x884C;&#x63CF;&#x8FF0;&#x3002;</p>
+<pre><code class="lang-typescript"><span class="hljs-keyword">interface</span> Person {
+  name: <span class="hljs-built_in">string</span>;
+  age: <span class="hljs-built_in">number</span>;
+}
+
+<span class="hljs-keyword">let</span> tom: Person = {
+  name: <span class="hljs-string">&quot;Tom&quot;</span>,
+  age: <span class="hljs-number">25</span>
+};
+</code></pre>
+<p>&#x5982;&#x4E0A;&#xFF0C;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x63A5;&#x53E3; Person&#xFF0C;&#x63A5;&#x7740;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x53D8;&#x91CF; tom&#xFF0C;&#x5B83;&#x7684;&#x7C7B;&#x578B;&#x662F; Person&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x7EA6;&#x675F;&#x4E86; tom &#x7684;&#x5F62;&#x72B6;&#x5FC5;&#x987B;&#x548C;&#x63A5;&#x53E3; Person &#x4E00;&#x81F4;&#x3002;</p>
+<p>&#x8D4B;&#x503C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53D8;&#x91CF;&#x7684;&#x5F62;&#x72B6;&#x5FC5;&#x987B;&#x548C;&#x63A5;&#x53E3;&#x7684;&#x5F62;&#x72B6;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;&#x591A;&#x4E00;&#x4E9B;&#x6216;&#x8005;&#x5C11;&#x4E00;&#x4E9B;&#x90FD;&#x4E0D;&#x884C;&#xFF08;&#x53EF;&#x9009;&#x5C5E;&#x6027;&#x9664;&#x5916;&#xFF09;&#x3002;</p>
+<p><strong>&#x63A5;&#x53E3;&#x4E00;&#x822C;&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;&#x3002;&#x6709;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E2D;&#x4F1A;&#x5EFA;&#x8BAE;&#x63A5;&#x53E3;&#x7684;&#x540D;&#x79F0;&#x52A0;&#x4E0A; I &#x524D;&#x7F00;&#x3002;</strong></p>
+<h2 id="&#x53EF;&#x9009;&#x5C5E;&#x6027;">&#x53EF;&#x9009;&#x5C5E;&#x6027;</h2>
+<p>&#x53EF;&#x9009;&#x5C5E;&#x6027;&#x7684;&#x542B;&#x4E49;&#x662F;&#x8BE5;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x4E0D;&#x5B58;&#x5728;&#x3002;</p>
+<pre><code class="lang-typescript"><span class="hljs-keyword">interface</span> Person {
+  name: <span class="hljs-built_in">string</span>;
+  age?: <span class="hljs-built_in">number</span>;
+}
+
+<span class="hljs-keyword">let</span> tom: Person = {
+  name: <span class="hljs-string">&quot;Tom&quot;</span>
+};
+</code></pre>
+<h2 id="&#x4EFB;&#x610F;&#x5C5E;&#x6027;">&#x4EFB;&#x610F;&#x5C5E;&#x6027;</h2>
+<p>&#x6709;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x5141;&#x8BB8;&#x6709;&#x4EFB;&#x610F;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-typescript"><span class="hljs-keyword">interface</span> Person {
+  name: <span class="hljs-built_in">string</span>;
+  age?: <span class="hljs-built_in">number</span>;
+  [propName: <span class="hljs-built_in">string</span>]: <span class="hljs-built_in">any</span>;
+}
+
+<span class="hljs-keyword">let</span> tom: Person = {
+  name: <span class="hljs-string">&quot;Tom&quot;</span>,
+  school: <span class="hljs-string">&quot;MIT&quot;</span>
+};
+</code></pre>
+<p>&#x4EFB;&#x610F;&#x4E3A; string &#x7684; key &#x53EF;&#x4EE5;&#x53D6; any &#x7684; value</p>
+<p>&#x4F46;&#x662F;&#x4E00;&#x65E6;&#x5B9A;&#x4E49;&#x4E86;&#x4EFB;&#x610F;&#x5C5E;&#x6027;&#xFF0C;&#x90A3;&#x4E48;&#x786E;&#x5B9A;&#x5C5E;&#x6027;&#x548C;&#x53EF;&#x9009;&#x5C5E;&#x6027;&#x7684;&#x7C7B;&#x578B;&#x90FD;&#x5FC5;&#x987B;&#x662F;&#x5B83;&#x7684;&#x7C7B;&#x578B;&#x7684;&#x5B50;&#x96C6;</p>
+<p>&#x4E3E;&#x4E2A; &#x1F330;&#xFF0C;</p>
+<pre><code class="lang-typescript"><span class="hljs-keyword">interface</span> Person {
+  name: <span class="hljs-built_in">string</span>;
+  age?: <span class="hljs-built_in">number</span>;
+  [propName: <span class="hljs-built_in">string</span>]: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">let</span> tom: Person = {
+  name: <span class="hljs-string">&quot;Tom&quot;</span>,
+  age: <span class="hljs-number">25</span>,
+  gender: <span class="hljs-string">&quot;male&quot;</span>
+};
+
+<span class="hljs-comment">// index.ts(3,5): error TS2411: Property &apos;age&apos; of type &apos;number&apos; is not assignable to string index type &apos;string&apos;.</span>
+<span class="hljs-comment">// index.ts(7,5): error TS2322: Type &apos;{ [x: string]: string | number; name: string; age: number; gender: string; }&apos; is not assignable to type &apos;Person&apos;.</span>
+<span class="hljs-comment">//   Index signatures are incompatible.</span>
+<span class="hljs-comment">//     Type &apos;string | number&apos; is not assignable to type &apos;string&apos;.</span>
+<span class="hljs-comment">//       Type &apos;number&apos; is not assignable to type &apos;string&apos;.</span>
+</code></pre>
+<p>&#x4E0A;&#x4F8B;&#x4E2D;&#xFF0C;&#x4EFB;&#x610F;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x5141;&#x8BB8;&#x662F; string&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x9009;&#x5C5E;&#x6027; age &#x7684;&#x503C;&#x5374;&#x662F; number&#xFF0C;number &#x4E0D;&#x662F; string &#x7684;&#x5B50;&#x5C5E;&#x6027;&#xFF0C;&#x6240;&#x4EE5;&#x62A5;&#x9519;&#x4E86;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="4-联合类型.html" class="navigation navigation-prev " aria-label="Previous page: 联合类型">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="6-数组.html" class="navigation navigation-next " aria-label="Next page: 数组">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"对象的类型——接口","level":"1.6","depth":1,"next":{"title":"数组","level":"1.7","depth":1,"path":"1-基础部分/6-数组.md","ref":"1-基础部分/6-数组.md","articles":[]},"previous":{"title":"联合类型","level":"1.5","depth":1,"path":"1-基础部分/4-联合类型.md","ref":"1-基础部分/4-联合类型.md","articles":[]},"dir":"ltr"},"config":{"plugins":["summary","toggle-chapters","theme-comscore","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"summary":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"typescript-book","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"1-基础部分/5-对象的类型-接口.md","mtime":"2019-11-16T09:44:48.085Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-16T15:47:03.550Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

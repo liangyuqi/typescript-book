@@ -1,14 +1,15 @@
 {
-  "name": "gitbook",
+  "name": "typescript-book",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "liangyuqi",
   "license": "ISC",
   "dependencies": {
-    "ebook-convert": "^2.0.1"
+    "ebook-convert": "^2.0.1",
+    "gitbook-plugin-summary": "^1.0.0"
   }
 }
