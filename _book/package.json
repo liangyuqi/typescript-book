@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "ebook-convert": "^2.0.1",
-    "gitbook-plugin-summary": "^1.0.0"
+    "gitbook-plugin-summary": "^1.0.0",
+    "gitbook-plugin-toggle-chapters": "0.0.3"
   }
 }
