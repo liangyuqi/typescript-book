@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sh bin/build.sh"
   },
   "author": "liangyuqi",
   "license": "ISC",
   "dependencies": {
-    "ebook-convert": "^2.0.1",
     "gitbook-plugin-summary": "^1.0.0",
     "gitbook-plugin-toggle-chapters": "0.0.3"
+  },
+  "devDependencies": {
+    "ebook-convert": "^2.0.1"
   }
 }
