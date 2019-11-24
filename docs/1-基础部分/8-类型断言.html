@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>类型推论 · typescript-book</title>
+        <title>类型断言 · typescript-book</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="4-联合类型  类型别名.html" />
+    <link rel="next" href="../2-进阶部分/1-元祖.html" />
     
     
-    <link rel="prev" href="2-简单补充数据类型.html" />
+    <link rel="prev" href="7-函数.html" />
     
 
     </head>
@@ -145,7 +145,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3" data-path="3-类型推论.html">
+        <li class="chapter " data-level="2.3" data-path="3-类型推论.html">
             
                 <a href="3-类型推论.html">
             
@@ -210,7 +210,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.8" data-path="8-类型断言.html">
+        <li class="chapter active" data-level="2.8" data-path="8-类型断言.html">
             
                 <a href="8-类型断言.html">
             
@@ -265,207 +265,6 @@
     
 
     
-        
-        <li class="header">docs</li>
-        
-        
-    
-        <li class="chapter " data-level="5.1" >
-            
-                <span>
-            
-                    
-                    1-基础部分
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" >
-            
-                <span>
-            
-                    
-                    2-进阶部分
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.3" >
-            
-                <span>
-            
-                    
-                    bin
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4" >
-            
-                <span>
-            
-                    
-                    gitbook
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="5.4.1" >
-            
-                <span>
-            
-                    
-                    fonts
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="5.4.1.1" >
-            
-                <span>
-            
-                    
-                    fontawesome
-            
-                </span>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4.2" >
-            
-                <span>
-            
-                    
-                    gitbook-plugin-fontsettings
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4.3" >
-            
-                <span>
-            
-                    
-                    gitbook-plugin-highlight
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4.4" >
-            
-                <span>
-            
-                    
-                    gitbook-plugin-lunr
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4.5" >
-            
-                <span>
-            
-                    
-                    gitbook-plugin-search
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4.6" >
-            
-                <span>
-            
-                    
-                    gitbook-plugin-sharing
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4.7" >
-            
-                <span>
-            
-                    
-                    gitbook-plugin-theme-comscore
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4.8" >
-            
-                <span>
-            
-                    
-                    gitbook-plugin-toggle-chapters
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4.9" >
-            
-                <span>
-            
-                    
-                    images
-            
-                </span>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-    
 
     <li class="divider"></li>
 
@@ -494,7 +293,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >类型推论</a>
+        <a href=".." >类型断言</a>
     </h1>
 </div>
 
@@ -509,18 +308,17 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7C7B;&#x578B;&#x63A8;&#x8BBA;">&#x7C7B;&#x578B;&#x63A8;&#x8BBA;</h1>
-<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x660E;&#x786E;&#x7684;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#xFF0C;&#x90A3;&#x4E48; TypeScript &#x4F1A;&#x4F9D;&#x7167;&#x7C7B;&#x578B;&#x63A8;&#x8BBA;&#xFF08;Type Inference&#xFF09;&#x7684;&#x89C4;&#x5219;&#x63A8;&#x65AD;&#x51FA;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x3002;</p>
-<p>&#x4E3E;&#x4E2A;&#x1F330;, &#x88AB;&#x63A8;&#x8BBA;&#x4E3A;&#x4E86; string</p>
-<pre><code class="lang-typescript"><span class="hljs-keyword">let</span> numSting = <span class="hljs-string">&quot;seven&quot;</span>;
-numSting = <span class="hljs-number">7</span>;
-
-<span class="hljs-comment">// index.ts(2,1): error TS2322: Type &apos;number&apos; is not assignable to type &apos;string&apos;.</span>
-</code></pre>
-<p>&#x5982;&#x679C;&#x5B9A;&#x4E49;&#x7684;&#x65F6;&#x5019;&#x6CA1;&#x6709;&#x8D4B;&#x503C;&#xFF0C;&#x4E0D;&#x7BA1;&#x4E4B;&#x540E;&#x6709;&#x6CA1;&#x6709;&#x8D4B;&#x503C;&#xFF0C;&#x90FD;&#x4F1A;&#x88AB;&#x63A8;&#x65AD;&#x6210; <code>any</code> &#x7C7B;&#x578B;&#x800C;&#x5B8C;&#x5168;&#x4E0D;&#x88AB;&#x7C7B;&#x578B;&#x68C0;&#x67E5;</p>
-<pre><code class="lang-typescript"><span class="hljs-keyword">let</span> num;
-num = <span class="hljs-string">&quot;seven&quot;</span>;
-num = <span class="hljs-number">7</span>;
+                                <h1 id="&#x7C7B;&#x578B;&#x65AD;&#x8A00;">&#x7C7B;&#x578B;&#x65AD;&#x8A00;</h1>
+<p>&#x7C7B;&#x578B;&#x65AD;&#x8A00;&#xFF08;Type Assertion&#xFF09;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x624B;&#x52A8;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x503C;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
+<h2 id="&#x8BED;&#x6CD5;">&#x8BED;&#x6CD5;</h2>
+<p><strong>&lt;&#x7C7B;&#x578B;&gt;&#x503C;</strong> &#x6216; <strong>&#x503C; as &#x7C7B;&#x578B;</strong></p>
+<pre><code class="lang-typescript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getLength</span>(<span class="hljs-params">something: <span class="hljs-built_in">string</span> | <span class="hljs-built_in">number</span></span>): <span class="hljs-title">number</span> </span>{
+  <span class="hljs-keyword">if</span> ((&lt;<span class="hljs-built_in">string</span>&gt;something).length) {
+    <span class="hljs-keyword">return</span> (&lt;<span class="hljs-built_in">string</span>&gt;something).length;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (something as <span class="hljs-built_in">number</span>) {
+    <span class="hljs-keyword">return</span> something.toString().length;
+  }
+}
 </code></pre>
 
                                 
@@ -549,12 +347,12 @@ num = <span class="hljs-number">7</span>;
 
             
                 
-                <a href="2-简单补充数据类型.html" class="navigation navigation-prev " aria-label="Previous page: 简单补充数据类型">
+                <a href="7-函数.html" class="navigation navigation-prev " aria-label="Previous page: 函数">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="4-联合类型  类型别名.html" class="navigation navigation-next " aria-label="Next page: 联合类型">
+                <a href="../2-进阶部分/1-元祖.html" class="navigation navigation-next " aria-label="Next page: 元组">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -565,7 +363,7 @@ num = <span class="hljs-number">7</span>;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"类型推论","level":"2.3","depth":1,"next":{"title":"联合类型","level":"2.4","depth":1,"path":"1-基础部分/4-联合类型  类型别名.md","ref":"1-基础部分/4-联合类型  类型别名.md","articles":[]},"previous":{"title":"简单补充数据类型","level":"2.2","depth":1,"path":"1-基础部分/2-简单补充数据类型.md","ref":"1-基础部分/2-简单补充数据类型.md","articles":[]},"dir":"ltr"},"config":{"plugins":["summary","toggle-chapters","theme-comscore","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"summary":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"typescript-book","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"1-基础部分/3-类型推论.md","mtime":"2019-11-17T15:24:51.462Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-24T15:31:00.670Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"类型断言","level":"2.8","depth":1,"next":{"title":"元组","level":"3.1","depth":1,"path":"2-进阶部分/1-元祖.md","ref":"2-进阶部分/1-元祖.md","articles":[]},"previous":{"title":"函数","level":"2.7","depth":1,"path":"1-基础部分/7-函数.md","ref":"1-基础部分/7-函数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["summary","toggle-chapters","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"summary":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"typescript-book","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"1-基础部分/8-类型断言.md","mtime":"2019-11-17T15:51:02.415Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-24T15:36:28.723Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -576,10 +374,6 @@ num = <span class="hljs-number">7</span>;
     
         
         <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

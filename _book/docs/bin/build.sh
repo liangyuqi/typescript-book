@@ -14,8 +14,8 @@ else
 fi
 
 # sudo cp -r _book/index.html bin
-git add _book 
+# git add _book 
 
-git  commit -m "Initial dist subtree commit"
+# git  commit -m "Initial dist subtree commit"
 
-git  push _book origin gh-pages
+# git  push _book origin gh-pages

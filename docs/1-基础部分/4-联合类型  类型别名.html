@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>类型推论 · typescript-book</title>
+        <title>联合类型 · typescript-book</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -65,10 +65,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="4-联合类型  类型别名.html" />
+    <link rel="next" href="5-对象的类型-接口.html" />
     
     
-    <link rel="prev" href="2-简单补充数据类型.html" />
+    <link rel="prev" href="3-类型推论.html" />
     
 
     </head>
@@ -145,7 +145,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3" data-path="3-类型推论.html">
+        <li class="chapter " data-level="2.3" data-path="3-类型推论.html">
             
                 <a href="3-类型推论.html">
             
@@ -158,7 +158,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="4-联合类型  类型别名.html">
+        <li class="chapter active" data-level="2.4" data-path="4-联合类型  类型别名.html">
             
                 <a href="4-联合类型  类型别名.html">
             
@@ -265,207 +265,6 @@
     
 
     
-        
-        <li class="header">docs</li>
-        
-        
-    
-        <li class="chapter " data-level="5.1" >
-            
-                <span>
-            
-                    
-                    1-基础部分
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" >
-            
-                <span>
-            
-                    
-                    2-进阶部分
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.3" >
-            
-                <span>
-            
-                    
-                    bin
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4" >
-            
-                <span>
-            
-                    
-                    gitbook
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="5.4.1" >
-            
-                <span>
-            
-                    
-                    fonts
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="5.4.1.1" >
-            
-                <span>
-            
-                    
-                    fontawesome
-            
-                </span>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4.2" >
-            
-                <span>
-            
-                    
-                    gitbook-plugin-fontsettings
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4.3" >
-            
-                <span>
-            
-                    
-                    gitbook-plugin-highlight
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4.4" >
-            
-                <span>
-            
-                    
-                    gitbook-plugin-lunr
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4.5" >
-            
-                <span>
-            
-                    
-                    gitbook-plugin-search
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4.6" >
-            
-                <span>
-            
-                    
-                    gitbook-plugin-sharing
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4.7" >
-            
-                <span>
-            
-                    
-                    gitbook-plugin-theme-comscore
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4.8" >
-            
-                <span>
-            
-                    
-                    gitbook-plugin-toggle-chapters
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4.9" >
-            
-                <span>
-            
-                    
-                    images
-            
-                </span>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-
-    
 
     <li class="divider"></li>
 
@@ -494,7 +293,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >类型推论</a>
+        <a href=".." >联合类型</a>
     </h1>
 </div>
 
@@ -509,18 +308,37 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7C7B;&#x578B;&#x63A8;&#x8BBA;">&#x7C7B;&#x578B;&#x63A8;&#x8BBA;</h1>
-<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x660E;&#x786E;&#x7684;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#xFF0C;&#x90A3;&#x4E48; TypeScript &#x4F1A;&#x4F9D;&#x7167;&#x7C7B;&#x578B;&#x63A8;&#x8BBA;&#xFF08;Type Inference&#xFF09;&#x7684;&#x89C4;&#x5219;&#x63A8;&#x65AD;&#x51FA;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x3002;</p>
-<p>&#x4E3E;&#x4E2A;&#x1F330;, &#x88AB;&#x63A8;&#x8BBA;&#x4E3A;&#x4E86; string</p>
-<pre><code class="lang-typescript"><span class="hljs-keyword">let</span> numSting = <span class="hljs-string">&quot;seven&quot;</span>;
-numSting = <span class="hljs-number">7</span>;
-
-<span class="hljs-comment">// index.ts(2,1): error TS2322: Type &apos;number&apos; is not assignable to type &apos;string&apos;.</span>
-</code></pre>
-<p>&#x5982;&#x679C;&#x5B9A;&#x4E49;&#x7684;&#x65F6;&#x5019;&#x6CA1;&#x6709;&#x8D4B;&#x503C;&#xFF0C;&#x4E0D;&#x7BA1;&#x4E4B;&#x540E;&#x6709;&#x6CA1;&#x6709;&#x8D4B;&#x503C;&#xFF0C;&#x90FD;&#x4F1A;&#x88AB;&#x63A8;&#x65AD;&#x6210; <code>any</code> &#x7C7B;&#x578B;&#x800C;&#x5B8C;&#x5168;&#x4E0D;&#x88AB;&#x7C7B;&#x578B;&#x68C0;&#x67E5;</p>
-<pre><code class="lang-typescript"><span class="hljs-keyword">let</span> num;
-num = <span class="hljs-string">&quot;seven&quot;</span>;
+                                <h1 id="&#x8054;&#x5408;&#x7C7B;&#x578B;">&#x8054;&#x5408;&#x7C7B;&#x578B;</h1>
+<p>&#x8054;&#x5408;&#x7C7B;&#x578B;&#xFF08;Union Types&#xFF09;&#x8868;&#x793A;&#x53D6;&#x503C;&#x53EF;&#x4EE5;&#x4E3A;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x4E2D;&#x7684;&#x4E00;&#x79CD;,&#x4F7F;&#x7528; <code>|</code> &#x5206;&#x9694;&#x6BCF;&#x4E2A;&#x7C7B;&#x578B;</p>
+<pre><code class="lang-typescript"><span class="hljs-keyword">let</span> num: <span class="hljs-built_in">number</span> | <span class="hljs-built_in">string</span> = <span class="hljs-string">&quot;seven&quot;</span>;
 num = <span class="hljs-number">7</span>;
+</code></pre>
+<h2 id="&#x7C7B;&#x578B;&#x522B;&#x540D;">&#x7C7B;&#x578B;&#x522B;&#x540D;</h2>
+<p>&#x7C7B;&#x578B;&#x522B;&#x540D;&#x7528;<code>type</code>&#x6765;&#x7ED9;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#xFF08;&#x53EF;&#x8054;&#x5408;&#x7C7B;&#x578B;&#xFF09;&#x8D77;&#x4E2A;&#x65B0;&#x540D;&#x5B57;&#x3002;</p>
+<pre><code class="lang-typescript"><span class="hljs-keyword">type</span> Name = <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">type</span> NameResolver = () =&gt; <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">type</span> NameOrResolver = Name | NameResolver;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getName</span>(<span class="hljs-params">n: NameOrResolver</span>): <span class="hljs-title">Name</span> </span>{
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> n === <span class="hljs-string">&quot;string&quot;</span>) {
+    <span class="hljs-keyword">return</span> n;
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> n();
+  }
+}
+</code></pre>
+<h2 id="&#x8BBF;&#x95EE;&#x8054;&#x5408;&#x7C7B;&#x578B;&#x7684;&#x5C5E;&#x6027;&#x6216;&#x65B9;&#x6CD5;">&#x8BBF;&#x95EE;&#x8054;&#x5408;&#x7C7B;&#x578B;&#x7684;&#x5C5E;&#x6027;&#x6216;&#x65B9;&#x6CD5;</h2>
+<p>&#x5F53; TypeScript &#x4E0D;&#x786E;&#x5B9A;&#x4E00;&#x4E2A;&#x8054;&#x5408;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x5230;&#x5E95;&#x662F;&#x54EA;&#x4E2A;&#x7C7B;&#x578B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x80FD;&#x8BBF;&#x95EE;&#x6B64;&#x8054;&#x5408;&#x7C7B;&#x578B;&#x7684;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x91CC;<strong>&#x5171;&#x6709;</strong>&#x7684;&#x5C5E;&#x6027;&#x6216;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-typescript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getLength</span>(<span class="hljs-params">something: <span class="hljs-built_in">string</span> | <span class="hljs-built_in">number</span></span>): <span class="hljs-title">number</span> </span>{
+  <span class="hljs-keyword">return</span> something.length;
+}
+
+<span class="hljs-comment">// index.ts(2,22): error TS2339: Property &apos;length&apos; does not exist on type &apos;string | number&apos;.</span>
+<span class="hljs-comment">//   Property &apos;length&apos; does not exist on type &apos;number&apos;.</span>
+</code></pre>
+<p>&#x8BBF;&#x95EE; string &#x548C; number &#x7684;&#x5171;&#x6709;&#x5C5E;&#x6027;&#x662F;&#x6CA1;&#x95EE;&#x9898;&#x7684;</p>
+<pre><code class="lang-typescript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getString</span>(<span class="hljs-params">something: <span class="hljs-built_in">string</span> | <span class="hljs-built_in">number</span></span>): <span class="hljs-title">string</span> </span>{
+  <span class="hljs-keyword">return</span> something.toString();
+}
 </code></pre>
 
                                 
@@ -549,12 +367,12 @@ num = <span class="hljs-number">7</span>;
 
             
                 
-                <a href="2-简单补充数据类型.html" class="navigation navigation-prev " aria-label="Previous page: 简单补充数据类型">
+                <a href="3-类型推论.html" class="navigation navigation-prev " aria-label="Previous page: 类型推论">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="4-联合类型  类型别名.html" class="navigation navigation-next " aria-label="Next page: 联合类型">
+                <a href="5-对象的类型-接口.html" class="navigation navigation-next " aria-label="Next page: 对象的类型——接口">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -565,7 +383,7 @@ num = <span class="hljs-number">7</span>;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"类型推论","level":"2.3","depth":1,"next":{"title":"联合类型","level":"2.4","depth":1,"path":"1-基础部分/4-联合类型  类型别名.md","ref":"1-基础部分/4-联合类型  类型别名.md","articles":[]},"previous":{"title":"简单补充数据类型","level":"2.2","depth":1,"path":"1-基础部分/2-简单补充数据类型.md","ref":"1-基础部分/2-简单补充数据类型.md","articles":[]},"dir":"ltr"},"config":{"plugins":["summary","toggle-chapters","theme-comscore","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"summary":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"typescript-book","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"1-基础部分/3-类型推论.md","mtime":"2019-11-17T15:24:51.462Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-24T15:31:00.670Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"联合类型","level":"2.4","depth":1,"next":{"title":"对象的类型——接口","level":"2.5","depth":1,"path":"1-基础部分/5-对象的类型-接口.md","ref":"1-基础部分/5-对象的类型-接口.md","articles":[]},"previous":{"title":"类型推论","level":"2.3","depth":1,"path":"1-基础部分/3-类型推论.md","ref":"1-基础部分/3-类型推论.md","articles":[]},"dir":"ltr"},"config":{"plugins":["summary","toggle-chapters","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"summary":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"typescript-book","gitbook":"*","theme-default":{"showLevel":true}},"file":{"path":"1-基础部分/4-联合类型  类型别名.md","mtime":"2019-11-17T15:46:10.334Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-24T15:36:28.723Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -576,10 +394,6 @@ num = <span class="hljs-number">7</span>;
     
         
         <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
